@@ -1,0 +1,54 @@
+{
+    "name": "magento/magento2-acceptance-test-module-backend",
+    "description": "Magento 2 Acceptance Test Module Backend",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/magento-pangolin/magento2-acceptance-test-framework"
+        }
+    ],
+    "require": {
+        "php": "~7.0",
+        "magento/magento2-acceptance-test-framework": "dev-develop",
+        "allure-framework/allure-codeception": "dev-master",
+        "consolidation/robo": "^1.0.0",
+        "henrikbjorn/lurker": "^1.2"
+    },
+    "suggest": {
+        "magento/magento2-acceptance-test-module-store": "dev-develop",
+        "magento/magento2-acceptance-test-module-directory": "dev-develop",
+        "magento/magento2-acceptance-test-module-developer": "dev-develop",
+        "magento/magento2-acceptance-test-module-eav": "dev-develop",
+        "magento/magento2-acceptance-test-module-reports": "dev-develop",
+        "magento/magento2-acceptance-test-module-sales": "dev-develop",
+        "magento/magento2-acceptance-test-module-quote": "dev-develop",
+        "magento/magento2-acceptance-test-module-catalog": "dev-develop",
+        "magento/magento2-acceptance-test-module-user": "dev-develop",
+        "magento/magento2-acceptance-test-module-security": "dev-develop",
+        "magento/magento2-acceptance-test-module-backup": "dev-develop",
+        "magento/magento2-acceptance-test-module-customer": "dev-develop",
+        "magento/magento2-acceptance-test-module-translation": "dev-develop",
+        "magento/magento2-acceptance-test-module-config": "dev-develop",
+        "magento/magento2-acceptance-test-module-theme": "dev-develop"
+    },
+    "type": "magento2-test-module",
+    "version": "dev-develop",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "psr-0": {
+            "Yandex": "vendor/allure-framework/allure-codeception/src/"
+        },
+        "psr-4": {
+            "Magento\\AcceptanceTestFramework\\": [
+                "vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework"
+            ],
+            "Magento\\AcceptanceTest\\": [
+                "tests/acceptance/Magento/AcceptanceTest",
+                "generated/Magento/AcceptanceTest"
+            ]
+        }
+    }
+}

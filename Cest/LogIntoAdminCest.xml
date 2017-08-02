@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test XML Example -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../vendor/magento/magento2-acceptance-test-framework/src/Magento/AcceptanceTestFramework/Test/etc/testSchema.xsd">
+    <cest name="LogIntoAdminCest">
+        <annotations>
+            <features value="Admin Login"/>
+            <stories value="Access Admin Login Page"/>
+            <env value="chrome"/>
+            <env value="firefox"/>
+            <env value="phantomjs"/>
+        </annotations>
+        <test name="logIntoAdmin">
+            <annotations>
+                <title value="You should be able to log into the Magento Admin backend."/>
+                <description value="You should be able to log into the Magento Admin backend."/>
+                <severity value="CRITICAL"/>
+                <group value="login"/>
+            </annotations>
+            <amOnUrl url="http://127.0.0.1:32772/admin/" mergeKey="amOnPage"/>
+            <fillField selector="#username" userInput="admin" mergeKey="fillField1"/>
+            <fillField selector="#login" userInput="123123q" mergeKey="fillField2"/>
+            <click selector=".actions .action-primary" mergeKey="clickOnSignIn"/>
+            <seeInCurrentUrl url="/admin/admin/" mergeKey="seeInCurrentUrl"/>
+        </test>
+    </cest>
+</config>

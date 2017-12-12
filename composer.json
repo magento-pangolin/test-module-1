@@ -2,7 +2,7 @@
     "name": "magento/magento2-functional-test-module-backend",
     "description": "Magento 2 Functional Test Module Backend",
     "type": "magento2-test-module",
-    "version": "100.0.0-dev",
+    "version": "dev-master",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
